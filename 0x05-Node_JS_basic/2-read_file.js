@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const countStudents = (dataPath) => {
+function countStudents(dataPath) {
   if (!fs.existsSync(dataPath)) {
     throw new Error("Cannot load the database");
   }
@@ -40,6 +40,6 @@ const countStudents = (dataPath) => {
       `Number of students in ${field}: ${group.length}. List: ${studentNames}`
     );
   }
-};
+}
 
 module.exports = countStudents;
